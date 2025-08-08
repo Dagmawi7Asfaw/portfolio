@@ -22,3 +22,4 @@ node_modules/
 # Local TLS keys (do not commit)
 cert.pem
 key.pem
+.vercel

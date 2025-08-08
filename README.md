@@ -108,28 +108,39 @@ Add new categories by:
 
 ## 🌐 Deployment
 
-This static site can be deployed to any platform:
+This static site is deployed on Vercel for optimal performance and automatic deployments.
 
-### GitHub Pages
+### Vercel (Recommended)
+
+1. **Install Vercel CLI**:
+
+   ```bash
+   npm install -g vercel
+   ```
+
+2. **Deploy**:
+
+   ```bash
+   vercel --prod
+   ```
+
+3. **Your site will be live** at `https://your-project-name.vercel.app`
+
+### Alternative Platforms
+
+#### GitHub Pages
 
 1. Push to your repository
 2. Go to Settings → Pages
 3. Select "Deploy from a branch" → `main` → `/ (root)`
 4. Your site will be available at `https://username.github.io/repository-name`
 
-### Netlify
+#### Netlify
 
 1. Drag and drop the folder to [Netlify](https://netlify.com)
 2. Or use CLI: `netlify deploy --prod`
 
-### Vercel
-
-```bash
-npm i -g vercel
-vercel --prod
-```
-
-### Other Platforms
+#### Other Platforms
 
 - **Firebase Hosting**: `firebase deploy`
 - **AWS S3**: Upload files to S3 bucket with static website hosting
