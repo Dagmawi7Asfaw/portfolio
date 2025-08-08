@@ -693,10 +693,3 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
-
-/* Light theme switcher helper */
-@media (prefers-color-scheme: light) {
-    :root:not(.light) {
-        /* default to dark, but allow toggling to light explicitly */
-    }
-}
