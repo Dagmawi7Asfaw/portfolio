@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dagmawi Asfaw — Portfolio</title>
+    <meta name="description"
+        content="Dagmawi Asfaw's portfolio: developer and designer building delightful web experiences." />
+    <meta name="theme-color" content="#0f172a" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+        <div class="container header-inner">
+            <a class="brand" href="#top" aria-label="Dagmawi Asfaw home">
+                <img src="./assets/icons/logo.svg" alt="Dagmawi Asfaw logo" width="32" height="32" />
+                <span>Dagmawi</span>
+            </a>
+            <nav class="nav" aria-label="Primary">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul id="nav-menu" class="nav-menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                    </svg>
+                </button>
+                <a class="btn btn-primary" href="#contact">Hire Me</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero" aria-label="Intro">
+            <div class="container grid-2">
+                <div class="hero-copy">
+                    <p class="eyebrow">Hi, I’m Dagmawi</p>
+                    <h1>Building delightful, performant web apps</h1>
+                    <p class="subhead">Full‑stack developer focused on exceptional UX, accessibility, and modern
+                        performance.
+                    </p>
+                    <div class="cta-group">
+                        <a class="btn btn-primary" href="#projects">View Projects</a>
+                        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+                    </div>
+                    <ul class="socials" aria-label="Social links">
+                        <li><a href="https://github.com/Dagmawi7Asfaw" target="_blank" rel="noreferrer noopener"
+                                aria-label="GitHub">
+                                <img src="./assets/icons/github.svg" alt="" width="22" height="22" />
+                            </a></li>
+                        <li><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer noopener"
+                                aria-label="LinkedIn">
+                                <img src="./assets/icons/linkedin.svg" alt="" width="22" height="22" />
+                            </a></li>
+                        <li><a href="mailto:dagmawyasfaw@gmail.com" aria-label="Email">
+                                <img src="./assets/icons/mail.svg" alt="" width="22" height="22" />
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="hero-media">
+                    <div class="profile">
+                        <img src="./assets/images/profile.svg" alt="Portrait of Dagmawi Asfaw" />
+                        <div class="glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section" aria-label="About me">
+            <div class="container grid-2">
+                <div>
+                    <h2>About</h2>
+                    <p>I craft accessible, fast, and beautiful web experiences. I love TypeScript, performance tuning,
+                        and thoughtful UI design.</p>
+                    <ul class="tags">
+                        <li>Python</li>
+                        <li>Rust</li>
+                        <li>C++</li>
+                        <li>Java</li>
+                        <li>HTML/CSS</li>
+                        <li>SQL</li>
+                        <li>Telegram Bots</li>
+                    </ul>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="num" data-count="2">0</div>
+                        <div class="label">Years Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num" data-count="9">0</div>
+                        <div class="label">Projects</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num" data-count="5">0</div>
+                        <div class="label">Languages</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section" aria-label="Projects">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Selected Projects</h2>
+                    <div class="filters" role="tablist" aria-label="Project categories">
+                        <button role="tab" class="filter active" data-filter="all" aria-selected="true">All</button>
+                        <button role="tab" class="filter" data-filter="bots">Bots</button>
+                        <button role="tab" class="filter" data-filter="rust">Rust</button>
+                        <button role="tab" class="filter" data-filter="cpp">C++</button>
+                        <button role="tab" class="filter" data-filter="java">Java</button>
+                        <button role="tab" class="filter" data-filter="web">Web</button>
+                    </div>
+                </div>
+                <div class="projects-grid">
+                    <article class="card" data-cat="bots">
+                        <img src="./assets/images/p1.svg" alt="Bible Verse Bot" />
+                        <div class="card-body">
+                            <h3>Bible Verse Bot</h3>
+                            <p>Telegram bot that schedules and posts Bible verses to groups/channels. Python.</p>
+                            <div class="card-actions">
+                                <a class="btn btn-ghost" href="https://github.com/Dagmawi7Asfaw/Bible_Verse_Bot"
+                                    target="_blank" rel="noreferrer noopener">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="bots">
+                        <img src="./assets/images/p2.svg" alt="Quiz Bot" />
+                        <div class="card-body">
+                            <h3>Quiz Bot</h3>
+                            <p>Interactive quiz bot using the Telegram Bot API. Python.</p>
+                            <div class="card-actions">
+                                <a class="btn btn-ghost" href="https://github.com/Dagmawi7Asfaw/quiz_bot"
+                                    target="_blank" rel="noreferrer noopener">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="bots">
+                        <img src="./assets/images/p3.svg" alt="Python Telegram Bot" />
+                        <div class="card-body">
+                            <h3>python-telegram-bot</h3>
+                            <p>General Telegram bot experiments and utilities in Python.</p>
+                            <div class="card-actions">
+                                <a class="btn btn-ghost" href="https://github.com/Dagmawi7Asfaw/python-telegram-bot"
+                                    target="_blank" rel="noreferrer noopener">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="rust">
+                        <img src="./assets/images/p4.svg" alt="Rust Music Player" />
+                        <div class="card-body">
+                            <h3>Music Player (Rust)</h3>
+                            <p>A Rust-based music player exploring audio playback and playlists.</p>
+                            <div class="card-actions">
+                                <a class="btn btn-ghost" href="https://github.com/Dagmawi7Asfaw/Music_Player"
+                                    target="_blank" rel="noreferrer noopener">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="cpp">
+                        <img src="./assets/images/p1.svg" alt="C++ Playlist Manager" />
+                        <div class="card-body">
+                            <h3>Music Playlist Manager (C++)</h3>
+                            <p>Console playlist manager practicing data structures and file I/O.</p>
+                            <div class="card-actions">
+                                <a class="btn btn-ghost" href="https://github.com/Dagmawi7Asfaw/music-playlist-manager"
+                                    target="_blank" rel="noreferrer noopener">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="java">
+                        <img src="./assets/images/p2.svg" alt="Java Address Book" />
+                        <div class="card-body">
+                            <h3>Address Book (Java/Swing)</h3>
+                            <p>Desktop CRUD app with Microsoft SQL Server persistence.</p>
+                            <div class="card-actions">
+                                <a class="btn btn-ghost" href="https://github.com/Dagmawi7Asfaw/Address-Book"
+                                    target="_blank" rel="noreferrer noopener">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="cpp">
+                        <img src="./assets/images/p3.svg" alt="C++ Compiler Project" />
+                        <div class="card-body">
+                            <h3>Compiler Project (C++)</h3>
+                            <p>Course project collaboration for a PoCD compiler implementation.</p>
+                            <div class="card-actions">
+                                <a class="btn btn-ghost" href="https://github.com/Dagmawi7Asfaw/PoCD-compiler-project"
+                                    target="_blank" rel="noreferrer noopener">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="web">
+                        <img src="./assets/images/p4.svg" alt="CSS Exercises" />
+                        <div class="card-body">
+                            <h3>CSS Exercises</h3>
+                            <p>Practice exercises from The Odin Project. HTML/CSS.</p>
+                            <div class="card-actions">
+                                <a class="btn btn-ghost" href="https://github.com/Dagmawi7Asfaw/css-exercises"
+                                    target="_blank" rel="noreferrer noopener">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="web">
+                        <img src="./assets/images/p1.svg" alt="Odin Recipes" />
+                        <div class="card-body">
+                            <h3>Odin Recipes</h3>
+                            <p>Simple recipe pages built while learning basic web dev.</p>
+                            <div class="card-actions">
+                                <a class="btn btn-ghost" href="https://github.com/Dagmawi7Asfaw/odin-recipes"
+                                    target="_blank" rel="noreferrer noopener">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section" aria-label="Experience">
+            <div class="container">
+                <h2>Experience</h2>
+                <ol class="timeline">
+                    <li>
+                        <div class="time">2025</div>
+                        <div class="content">
+                            <h3>Rust Music Player</h3>
+                            <p>Built a music player in Rust focusing on playlist and playback features. Open‑source on
+                                GitHub.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="time">2025</div>
+                        <div class="content">
+                            <h3>Telegram Bots with Python</h3>
+                            <p>Developed bots including a Bible verse scheduler and quiz bot using the Telegram Bot API
+                                and Python.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="time">2025</div>
+                        <div class="content">
+                            <h3>Java Address Book (Swing + SQL Server)</h3>
+                            <p>Desktop CRUD application using Java/Swing with persistence in Microsoft SQL Server.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="time">2024</div>
+                        <div class="content">
+                            <h3>C++ Projects</h3>
+                            <p>Implemented a playlist manager and contributed to a compiler project, practicing data
+                                structures and file I/O in C++.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="contact" class="section" aria-label="Contact">
+            <div class="container grid-2">
+                <div>
+                    <h2>Let’s build something great</h2>
+                    <p>Have a challenge in mind? I’m available for freelance and full‑time roles.</p>
+                    <ul class="contact-list">
+                        <li>
+                            <img src="./assets/icons/mail.svg" alt="" width="20" height="20" />
+                            <a href="mailto:hello@example.com">hello@example.com</a>
+                        </li>
+                        <li>
+                            <img src="./assets/icons/map-pin.svg" alt="" width="20" height="20" />
+                            Addis Ababa, Ethiopia
+                        </li>
+                    </ul>
+                </div>
+                <form class="contact-form" name="contact" netlify>
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Your name" required />
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="How can I help?"
+                            required></textarea>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Dagmawi Asfaw. All rights reserved.</p>
+            <a href="#top" class="to-top" aria-label="Back to top">
+                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                    <path d="M12 4l-8 8h5v8h6v-8h5z" />
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <script defer src="./script.js"></script>
+</body>
+
+</html>

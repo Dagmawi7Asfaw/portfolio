@@ -1,0 +1,20 @@
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Certs (local dev)
+localhost+*.pem
+*-key.pem
+
+# Node tools
+node_modules/
+
+# Editor
+.vscode/
+.idea/
+
+# Misc
+.env
