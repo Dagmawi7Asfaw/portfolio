@@ -1,137 +1,176 @@
 # Dagmawi Asfaw — Portfolio
 
-A modern, responsive, single‑page portfolio built with semantic HTML, modern CSS, and vanilla JavaScript. It features dark/light theme toggle with persistence, animated section reveals, mobile navigation, project filtering, and accessible UI components.
+A modern, responsive portfolio website showcasing software development projects and skills. Built with semantic HTML5, modern CSS3, and vanilla JavaScript—no frameworks required.
 
-## Preview
+## ✨ Features
 
-- Local dev (HTTP): `http://127.0.0.1:5500` (when using a static server)
-- Local dev (HTTPS, optional): see the HTTPS section below
+- **Responsive Design**: Mobile-first approach with fluid typography and flexible grids
+- **Dark/Light Theme**: Toggle with localStorage persistence and system preference detection
+- **Accessibility**: WCAG compliant with skip links, semantic landmarks, and proper contrast ratios
+- **Performance**: Optimized with SVG assets, lazy animations, and minimal JavaScript
+- **Interactive Elements**: Animated counters, scroll-triggered reveals, project filtering
+- **SEO Optimized**: Meta tags, structured data, and semantic HTML
 
-## Features
+## 🛠️ Tech Stack
 
-- Accessibility: skip link, reduced motion friendly animations, semantic landmarks, color‑contrast aware theme
-- Responsive layout: mobile‑first, flexible grids, fluid typography
-- Theming: dark/light with `localStorage` persistence and system preference detection
-- Interactions: animated counters, on‑scroll reveal, category filters, mobile nav
-- Performance: no frameworks, minimal JS, SVG assets, lazy animations
-- SEO: descriptive `<title>` and meta description
+- **Frontend**: HTML5, CSS3 (Custom Properties, Grid, Flexbox), Vanilla JavaScript
+- **Assets**: SVG icons and placeholder images
+- **Deployment**: Static site ready for any hosting platform
+- **No Build Process**: Zero dependencies, instant deployment
 
-## Tech Stack
-
-- HTML5, CSS (custom properties, media queries), JavaScript (DOM APIs)
-- No build step required; purely static
-
-## Project structure
+## 📁 Project Structure
 
 ```
-Portfolio/
-├─ index.html
-├─ styles.css
-├─ script.js
-└─ assets/
-   ├─ icons/ (SVG icons: logo, GitHub, LinkedIn, mail, map-pin)
-   └─ images/ (SVG placeholders: profile, p1–p4)
+portfolio/
+├── index.html          # Main HTML document
+├── styles.css          # CSS with custom properties and responsive design
+├── script.js           # Vanilla JavaScript for interactivity
+├── README.md           # This file
+└── assets/
+    ├── icons/          # SVG icons (GitHub, LinkedIn, mail, etc.)
+    └── images/         # SVG placeholder images
 ```
 
-## Getting started
+## 🚀 Quick Start
 
-1. Clone or download this folder
-2. Serve the directory with any static server (pick one):
-   - Python
+1. **Clone the repository**
 
-     ```bash
-     cd /home/zohar/Downloads/Portfolio
-     python3 -m http.server 5500
-     ```
+   ```bash
+   git clone https://github.com/Dagmawi7Asfaw/portfolio.git
+   cd portfolio
+   ```
 
-     Open `http://127.0.0.1:5500`
-   - Node (`http-server`)
+2. **Serve locally** (choose one):
 
-     ```bash
-     npx http-server . -p 5500
-     ```
+   ```bash
+   # Python 3
+   python3 -m http.server 5500
+   
+   # Node.js
+   npx http-server . -p 5500
+   
+   # PHP
+   php -S localhost:5500
+   ```
 
-### Optional: HTTPS locally
+3. **Open in browser**: `http://localhost:5500`
 
-If your browser blocks geolocation/clipboard/etc. over HTTP, you can use a locally‑trusted certificate:
+## 🎨 Customization
+
+### Personal Information
+
+Update `index.html`:
+
+- `<title>` and meta description
+- Header brand name and logo alt text
+- Profile image alt text
+- Contact information and location
+
+### Social Links
+
+Edit the social links section:
+
+```html
+<ul class="socials">
+  <li><a href="https://github.com/yourusername">GitHub</a></li>
+  <li><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></li>
+  <li><a href="mailto:your@email.com">Email</a></li>
+</ul>
+```
+
+### Skills & Experience
+
+- **Skills**: Update the `ul.tags` in the About section
+- **Experience**: Modify the timeline in the Experience section
+- **Stats**: Change `data-count` values in the stats section
+
+### Projects
+
+Each project card uses `data-cat` for filtering:
+
+```html
+<article class="card" data-cat="rust">
+  <img src="./assets/images/p4.svg" alt="Project Name" />
+  <div class="card-body">
+    <h3>Project Name</h3>
+    <p>Project description</p>
+    <div class="card-actions">
+      <a class="btn btn-ghost" href="https://github.com/username/repo">Code</a>
+    </div>
+  </div>
+</article>
+```
+
+Add new categories by:
+
+1. Adding a filter button with `data-filter="category"`
+2. Setting `data-cat="category"` on relevant project cards
+
+## 🌐 Deployment
+
+This static site can be deployed to any platform:
+
+### GitHub Pages
+
+1. Push to your repository
+2. Go to Settings → Pages
+3. Select "Deploy from a branch" → `main` → `/ (root)`
+4. Your site will be available at `https://username.github.io/repository-name`
+
+### Netlify
+
+1. Drag and drop the folder to [Netlify](https://netlify.com)
+2. Or use CLI: `netlify deploy --prod`
+
+### Vercel
 
 ```bash
-# Install mkcert (Linux example)
-curl -L -o /tmp/mkcert 'https://dl.filippo.io/mkcert/latest?for=linux/amd64'
-chmod +x /tmp/mkcert && sudo mv /tmp/mkcert /usr/local/bin/mkcert
-mkcert -install
-
-# Generate a cert for localhost and your LAN IP (edit the IP as needed)
-mkcert localhost 127.0.0.1 192.168.186.96
-
-# Serve with HTTPS
-npx http-server . -p 5500 -S -C localhost+2.pem -K localhost+2-key.pem
+npm i -g vercel
+vercel --prod
 ```
 
-Open `https://127.0.0.1:5500`. If prompted, restart the browser after `mkcert -install`.
+### Other Platforms
 
-## Customization
+- **Firebase Hosting**: `firebase deploy`
+- **AWS S3**: Upload files to S3 bucket with static website hosting
+- **Cloudflare Pages**: Connect your GitHub repository
 
-- Branding and meta
-  - Edit `index.html`:
-    - `<title>` and meta `description`
-    - Header brand text and `alt` on logo/profile images
-- Social links
-  - Update links in `index.html` under the `ul.socials` list. Example:
+## ♿ Accessibility Features
 
-    ```html
-    <a href="https://github.com/Dagmawi7Asfaw" target="_blank" rel="noreferrer noopener">…</a>
-    ```
+- **Semantic HTML**: Proper use of landmarks (`header`, `main`, `footer`, `nav`)
+- **Skip Links**: Keyboard navigation support
+- **Focus Management**: Visible focus states and logical tab order
+- **Color Contrast**: WCAG AA compliant color combinations
+- **Reduced Motion**: Respects user's motion preferences
+- **Screen Reader Support**: Meaningful alt text and ARIA labels
 
-- About skills
-  - Update the chips in the `#about` section’s `ul.tags`
-- Experience timeline
-  - Replace items in the `#experience` section’s `ol.timeline`
-- Projects
-  - Cards live in the `#projects` section. Each `article.card` uses `data-cat` for filtering. Example:
+## 📱 Browser Support
 
-    ```html
-    <article class="card" data-cat="rust">
-      <img src="./assets/images/p4.svg" alt="Rust Music Player" />
-      <div class="card-body">
-        <h3>Music Player (Rust)</h3>
-        <p>…</p>
-        <div class="card-actions">
-          <a class="btn btn-ghost" href="https://github.com/Dagmawi7Asfaw/Music_Player" target="_blank" rel="noreferrer noopener">Code</a>
-        </div>
-      </div>
-    </article>
-    ```
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
 
-  - The filter buttons are defined above the grid. To add a new category, add a button with `data-filter` and set matching `data-cat` on relevant cards.
-- Stats
-  - Update the counters in `#about .stats` by changing the `data-count` values and labels
+## 🤝 Contributing
 
-## Deployment
+This is a personal portfolio template. Feel free to:
 
-Because this is a static site, you can deploy anywhere:
+- Fork and adapt for your own use
+- Report bugs or suggest improvements
+- Share your customized version
 
-- GitHub Pages
-  - Push the folder to a repository
-  - In repo settings → Pages → Deploy from branch → `main` → `/ (root)`
-  - Your site will be served over HTTPS automatically
-- Netlify
-  - Drag‑and‑drop the folder on the Netlify dashboard, or use `netlify deploy`
-- Vercel
-  - `vercel --prod` in the project directory (no framework preset required)
+## 📄 License
 
-## Accessibility checklist
+This project is provided for personal use. For open-source distribution, consider adding an MIT or similar license.
 
-- Landmarks: `header`, `main`, `footer`, `nav` with `aria-label`
-- Skip link at the top for keyboard users
-- Focus states and sufficient color contrast
-- Images with meaningful `alt` text; decorative images use empty `alt` when appropriate
+## 🙏 Acknowledgments
 
-## Notes on content
+- [Inter font](https://rsms.me/inter/) by Rasmus Andersson
+- [Feather Icons](https://feathericons.com/) for icon inspiration
+- Modern CSS techniques and best practices
 
-- This instance reflects Dagmawi Asfaw’s public repositories and skills. Update links and copy as your projects evolve.
-- Placeholder thumbnails are SVGs for performance; replace with your own images if desired.
+---
 
-## License
+**Built with ❤️ by Dagmawi Asfaw**
 
-This portfolio code is provided for personal use. If you intend to reuse or adapt it for open‑source distribution, consider adding an explicit LICENSE file (e.g., MIT) to your repository.
+*Last updated: January 2025*
