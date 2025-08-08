@@ -20,7 +20,7 @@ A modern, responsive portfolio website showcasing software development projects 
 
 ## 📁 Project Structure
 
-```
+```md
 portfolio/
 ├── index.html          # Main HTML document
 ├── styles.css          # CSS with custom properties and responsive design
@@ -171,6 +171,6 @@ This project is provided for personal use. For open-source distribution, conside
 
 ---
 
-**Built with ❤️ by Dagmawi Asfaw**
+### Built with ❤️ by Dagmawi Asfaw
 
-*Last updated: August 2025*
+### Last updated: August 2025*
