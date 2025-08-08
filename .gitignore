@@ -18,3 +18,7 @@ node_modules/
 
 # Misc
 .env
+
+# Local TLS keys (do not commit)
+cert.pem
+key.pem

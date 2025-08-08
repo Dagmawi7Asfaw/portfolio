@@ -173,4 +173,4 @@ This project is provided for personal use. For open-source distribution, conside
 
 **Built with ❤️ by Dagmawi Asfaw**
 
-*Last updated: January 2025*
+*Last updated: August 2025*
