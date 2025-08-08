@@ -13,6 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- <link href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css" rel="stylesheet">    -->
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
 </head>
 
 <body>
@@ -64,14 +67,14 @@
                     <ul class="socials" aria-label="Social links">
                         <li><a href="https://github.com/Dagmawi7Asfaw" target="_blank" rel="noreferrer noopener"
                                 aria-label="GitHub">
-                                <img src="./assets/icons/github.svg" alt="" width="22" height="22" />
+                                <i data-feather="github"></i>
                             </a></li>
                         <li><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer noopener"
                                 aria-label="LinkedIn">
-                                <img src="./assets/icons/linkedin.svg" alt="" width="22" height="22" />
+                                <i data-feather="linkedin"></i>
                             </a></li>
                         <li><a href="mailto:dagmawyasfaw@gmail.com" aria-label="Email">
-                                <img src="./assets/icons/mail.svg" alt="" width="22" height="22" />
+                                <i data-feather="mail"></i>
                             </a></li>
                     </ul>
                 </div>
@@ -280,16 +283,20 @@
                     <p>Have a challenge in mind? I’m available for freelance and full‑time roles.</p>
                     <ul class="contact-list">
                         <li>
-                            <img src="./assets/icons/mail.svg" alt="" width="20" height="20" />
+                            <i data-feather="mail"></i>
                             <a href="mailto:dagmawyasfaw@gmail.com">dagmawyasfaw@gmail.com</a>
                         </li>
                         <li>
-                            <img src="./assets/icons/map-pin.svg" alt="" width="20" height="20" />
-                            4 Killo, Addis Ababa, Ethiopia
+                            <i data-feather="map-pin"></i>
+                            <a href="https://www.google.com/maps/place/4+Killo,+Addis+Ababa,+Ethiopia" target="_blank"
+                                rel="noreferrer noopener">
+
+                                4 Killo, Addis Ababa, Ethiopia
+                            </a>
                         </li>
                     </ul>
                 </div>
-                <form class="contact-form" name="contact" netlify>
+                <form class="contact-form">
                     <div class="field">
                         <label for="name">Name</label>
                         <input id="name" name="name" type="text" placeholder="Your name" required />
@@ -321,6 +328,10 @@
     </footer>
 
     <script defer src="./script.js"></script>
+    <script>
+        // Initialize Feather icons
+        feather.replace();
+    </script>
 </body>
 
 </html>
