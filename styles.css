@@ -858,3 +858,20 @@ body {
     padding-left: env(safe-area-inset-left, 0);
     padding-right: env(safe-area-inset-right, 0);
 }
+
+/* Filters focus handling to avoid overflow/misalignment */
+.filters {
+    overflow: hidden;
+}
+
+.filters .filter {
+    vertical-align: middle;
+}
+
+.filters .filter:focus {
+    outline: none;
+}
+
+.filters .filter:focus-visible {
+    box-shadow: 0 0 0 2px color-mix(in oklab, var(--brand-2) 60%, transparent) inset;
+}
