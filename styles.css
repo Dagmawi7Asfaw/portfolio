@@ -807,6 +807,30 @@ body {
     .header-actions .btn-primary {
         width: 100%;
     }
+
+    /* Alignment fixes for filters and contact list */
+    .filters {
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 8px;
+        /* was 6px; give a bit more breathing room */
+    }
+
+    .filters .filter {
+        display: inline-flex;
+        align-items: center;
+        line-height: 1;
+    }
+
+    .filters .filter {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    .contact-list li {
+        align-items: flex-start;
+        /* top-align icon with multi-line text */
+    }
 }
 
 @media (min-width: 600px) and (max-width: 899px) {
