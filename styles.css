@@ -693,3 +693,93 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    .section {
+        padding: var(--space-7) 0;
+    }
+
+    .hero {
+        padding: var(--space-8) 0 var(--space-7);
+    }
+
+    .hero h1 {
+        font-size: clamp(26px, 8vw, 40px);
+    }
+
+    .cta-group {
+        gap: var(--space-2);
+    }
+
+    .projects-grid {
+        gap: var(--space-4);
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    .profile {
+        width: min(360px, 100%);
+        border-radius: 22px;
+    }
+
+    .socials {
+        gap: var(--space-2);
+    }
+
+    .btn {
+        padding: 10px 14px;
+        border-radius: 10px;
+    }
+
+    .nav-toggle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .nav-menu {
+        min-width: min(90vw, 280px);
+        right: 8px;
+        left: auto;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        width: min(100% - 1.5rem, var(--container));
+    }
+
+    .btn {
+        padding: 9px 12px;
+    }
+
+    .card img {
+        height: 130px;
+    }
+
+    .nav-menu {
+        min-width: 88vw;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+    .section {
+        padding: calc(var(--space-8) - 8px) 0;
+    }
+
+    .projects-grid {
+        gap: calc(var(--space-5) - 6px);
+    }
+
+    .card img {
+        height: 160px;
+    }
+}
+
+/* Safe area support for notched devices */
+body {
+    padding-left: env(safe-area-inset-left, 0);
+    padding-right: env(safe-area-inset-right, 0);
+}
