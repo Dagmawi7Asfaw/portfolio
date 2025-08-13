@@ -137,34 +137,43 @@
     els.forEach((el) => obs.observe(el));
   }
 
+  function initToTop() {
+    const toTop = document.querySelector('.to-top');
+    if (!toTop) return;
+    toTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
   function initContactForm() {
     const form = document.querySelector('.contact-form');
     if (!form) return;
 
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
-      
+
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
       const message = document.getElementById('message').value;
-      
+
       if (!name || !email || !message) {
         alert('Please fill in all fields');
         return;
       }
-      
+
       // Create Gmail compose URL instead of mailto
       const subject = `Portfolio Contact from ${name}`;
       const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-      
+
       const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=dagmawyasfaw@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      
+
       // Open Gmail in new tab
       window.open(gmailUrl, '_blank');
-      
+
       // Reset form
       form.reset();
-      
+
       // Show success message
       alert('Opening your email client...');
     });
@@ -178,6 +187,7 @@
     initFilters();
     initCounters();
     initReveal();
+    initToTop();
     initContactForm();
   });
 })(); 
