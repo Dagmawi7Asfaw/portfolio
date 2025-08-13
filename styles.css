@@ -460,11 +460,13 @@ body {
 
 .filters {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
     background: var(--bg-elev);
-    padding: 6px;
+    padding: 8px;
     border-radius: 14px;
     border: 1px solid var(--border);
+    max-width: 100%;
 }
 
 .filters .filter {
@@ -868,7 +870,8 @@ body {
 
 /* Filters focus handling to avoid overflow/misalignment */
 .filters {
-    overflow: hidden;
+    overflow: visible;
+    /* allow pills to wrap to next line without clipping */
 }
 
 .filters .filter {
@@ -881,4 +884,16 @@ body {
 
 .filters .filter:focus-visible {
     box-shadow: 0 0 0 2px color-mix(in oklab, var(--brand-2) 60%, transparent) inset;
+}
+
+/* Ensure filter buttons don't shrink too small when wrapping */
+.filters .filter {
+    flex: 0 0 auto;
+}
+
+/* Encourage last item to wrap when tight */
+@media (max-width: 420px) {
+    .filters {
+        row-gap: 6px;
+    }
 }
