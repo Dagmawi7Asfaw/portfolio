@@ -910,9 +910,15 @@ body {
 /* Project card language icon */
 .card-thumb {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 180px;
+    /* match .card img height */
     display: grid;
     place-items: center;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .card-thumb .devicon-python-plain,
@@ -930,7 +936,42 @@ body {
     position: relative;
 }
 
-/* Optionally reduce prominence of placeholder image */
+/* Place text above overlay and keep spacing */
 .card>img {
     opacity: 0;
+}
+
+.card-body {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 600px) {
+    .card img {
+        height: 150px;
+    }
+
+    .card-thumb {
+        height: 150px;
+    }
+}
+
+@media (max-width: 360px) {
+    .card img {
+        height: 130px;
+    }
+
+    .card-thumb {
+        height: 130px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+    .card img {
+        height: 160px;
+    }
+
+    .card-thumb {
+        height: 160px;
+    }
 }
