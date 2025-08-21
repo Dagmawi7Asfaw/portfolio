@@ -906,3 +906,31 @@ body {
         row-gap: 6px;
     }
 }
+
+/* Project card language icon */
+.card-thumb {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+}
+
+.card-thumb .devicon-python-plain,
+.card-thumb .devicon-rust-plain,
+.card-thumb .devicon-cplusplus-plain,
+.card-thumb .devicon-java-plain,
+.card-thumb .devicon-css3-plain,
+.card-thumb .devicon-html5-plain {
+    font-size: 80px;
+    opacity: 0.9;
+}
+
+/* Ensure card has positioning context */
+.card {
+    position: relative;
+}
+
+/* Optionally reduce prominence of placeholder image */
+.card>img {
+    opacity: 0;
+}
