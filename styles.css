@@ -908,70 +908,38 @@ body {
 }
 
 /* Project card language icon */
-.card-thumb {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+.card-media {
     height: 180px;
-    /* match .card img height */
     display: grid;
     place-items: center;
-    pointer-events: none;
-    z-index: 0;
+    border-bottom: 1px solid var(--border);
+    background: #0b1220;
 }
 
-.card-thumb .devicon-python-plain,
-.card-thumb .devicon-rust-plain,
-.card-thumb .devicon-cplusplus-plain,
-.card-thumb .devicon-java-plain,
-.card-thumb .devicon-css3-plain,
-.card-thumb .devicon-html5-plain {
-    font-size: 80px;
+.card-media .devicon-python-plain,
+.card-media .devicon-rust-plain,
+.card-media .devicon-cplusplus-plain,
+.card-media .devicon-java-plain,
+.card-media .devicon-css3-plain,
+.card-media .devicon-html5-plain {
+    font-size: 64px;
     opacity: 0.9;
 }
 
-/* Ensure card has positioning context */
-.card {
-    position: relative;
-}
-
-/* Place text above overlay and keep spacing */
-.card>img {
-    opacity: 0;
-}
-
-.card-body {
-    position: relative;
-    z-index: 1;
-}
-
 @media (max-width: 600px) {
-    .card img {
-        height: 150px;
-    }
-
-    .card-thumb {
+    .card-media {
         height: 150px;
     }
 }
 
 @media (max-width: 360px) {
-    .card img {
-        height: 130px;
-    }
-
-    .card-thumb {
+    .card-media {
         height: 130px;
     }
 }
 
 @media (min-width: 600px) and (max-width: 899px) {
-    .card img {
-        height: 160px;
-    }
-
-    .card-thumb {
+    .card-media {
         height: 160px;
     }
 }
